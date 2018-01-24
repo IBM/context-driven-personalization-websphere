@@ -61,9 +61,9 @@ Select the starting node in PCI stream, and browse for the order and user files,
 
 ## 3.	Churn out the user affinity-enriched files.
 
-*       The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
+* The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
 
-*       The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
+*  The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
 
 ![](doc/source/images/spss_stream.PNG)
 
