@@ -64,7 +64,7 @@ Select the starting node in PCI stream, and browse for the order and user files,
 
 •       The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
 
-![](doc/source/images/SPSS Stream.PNG)
+![](doc/source/images/spss_stream.PNG)
 
 ## 4.	Configurations in WCS Management Console
 Enable Facet for your selected attribute like [eq: Material below](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.management-center.doc/concepts/cpnfacets.htm)
