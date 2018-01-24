@@ -21,7 +21,7 @@ The intended audience for this journey are architects and senior developers who 
 
 ## Included components
 
-[WebSphere Commerce](http://www-03.ibm.com/software/products/en/websphere-commerce): IBM® WebSphere® Commerce is an omni-channel commerce platform that gives you the customer and business insight needed to engage shoppers as individuals with personalized content and offers, deliver mobile optimized experiences and more quickly respond to market opportunities to grow your business.
+[WebSphere Commerce](http://www-03.ibm.com/software/products/en/websphere-commerce): IBM WebSphere Commerce is an omni-channel commerce platform that gives you the customer and business insight needed to engage shoppers as individuals with personalized content and offers, deliver mobile optimized experiences and more quickly respond to market opportunities to grow your business.
 
 [Predictive Customer Intelligence](https://www.ibm.com/us-en/marketplace/predictive-customer-analytics): PCI is an analytical tool that helps with reaching customer objectives and improving customer experience by analyzing the available data and predicting next best actions.
 
@@ -37,9 +37,6 @@ To be updated
 # Steps
 
 Follow these steps to setup and run this developer pattern. The steps are described in detail below.
-
-Follow these steps to setup and run this developer journey. The steps are
-described in detail below.
 
 ## 1.	Data capture from WCS
 
@@ -132,9 +129,13 @@ Execute below SQL statement by updating CMDREG
 
 INSERT INTO CMDREG (STOREENT_ID, INTERFACENAME, CLASSNAME, TARGET) VALUES (0, 'com.ibm.commerce.catalog.commands.SearchDisplayCmd', 'com.ext.commerce.catalog.commands.ExtSearchDisplayCmdImpl', 'Local');
 
-## 7.	Login into WCS as one of the existing users, who had placed prior orders across multiple categories. This data would have been analyzed by PCI and the user would have a strong affinity established.
+## 7.	Login to WCS
 
-## 8.	Search for a category and notice that the search results are tuned in accordance with the brand/size affinity established by PCI.
+Login into WCS as one of the existing users, who had placed prior orders across multiple categories. This data would have been analyzed by PCI and the user would have a strong affinity established.
+
+## 8.	Category Search
+
+Search for a category and notice that the search results are tuned in accordance with the brand/size affinity established by PCI.
 
 # Troubleshooting
 
