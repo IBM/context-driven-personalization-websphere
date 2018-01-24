@@ -23,7 +23,7 @@ The intended audience for this journey are architects and senior developers who 
 
 [WebSphere Commerce](http://www-03.ibm.com/software/products/en/websphere-commerce): IBM WebSphere Commerce is an omni-channel commerce platform that gives you the customer and business insight needed to engage shoppers as individuals with personalized content and offers, deliver mobile optimized experiences and more quickly respond to market opportunities to grow your business.
 
-[Predictive Customer Intelligence](https://www.ibm.com/us-en/marketplace/predictive-customer-analytics): PCI is an analytical tool that helps with reaching customer objectives and improving customer experience by analyzing the available data and predicting next best actions.
+[Predictive Customer Intelligence](https://www.ibm.com/us-en/marketplace/predictive-customer-analytics): PCI is an analytical tool that helps with reaching customer objectives and improving customer experience by analyzing the available data and predicting next best actions. The analytics in PCI is driven by IBM SPSS Modeler.
 
 ## Features Technologies
 
@@ -60,7 +60,11 @@ dataextract.cmd  <path to wc-dataload.xml> wc-dataload.xml uses the configuratio
 Select the starting node in PCI stream, and browse for the order and user files, exported from WCS.
 
 ## 3.	Churn out the user affinity-enriched files.
-The files are processed by the modeler to associate with user affinity/preference data. The files with the user-enriched data would be placed in the output path specified.
+•       The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
+
+•       The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
+
+![](doc/source/images/SPSS Stream.PNG)
 
 ## 4.	Configurations in WCS Management Console
 Enable Facet for your selected attribute like [eq: Material below](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.management-center.doc/concepts/cpnfacets.htm)
