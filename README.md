@@ -63,7 +63,17 @@ Select the starting node in PCI stream, and browse for the order and user files,
 
 * The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
 
-*  The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
+*  The output files with the user-enriched data would be placed in the output path specified. 
+
+* [Clone This Repo](https://github.com/IBM/context-driven-personalization-websphere)
+
+* Navigate to [spss_stream](https://github.com/IBM/context-driven-personalization-websphere/tree/master/spss_stream)
+
+* Open the SPSS stream with SPSS modeler, double click on Orders.csv node browse and select the input file, click ok & do a right click and hit run. The output file for user affinity will be saved at the specified location.
+
+* Open the SPSS stream with SPSS modeler, double click on Pageview_new.csv node browse and select the input file, click ok & do a right click and hit run. The output file for user synonyms will be saved at the specified location.
+
+* The screenshot of the SPSS stream is below which has the rules for transformation of data and the stream is available at the spss_stream folder.
 
 ![](doc/source/images/spss_stream.PNG)
 
