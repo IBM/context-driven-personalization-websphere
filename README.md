@@ -50,19 +50,20 @@ UPDATE ATTR SET FIELD1=0 WHERE ATTR_ID IN (SELECT ATTR_ID FROM ATTRDESC WHERE LA
 
  Use the data extraction utility in WCS to extract order and user data.
 
-•	Extract the user profile details by using the data extract utility in WebSphere Commerce.
+*	Extract the user profile details by using the data extract utility in WebSphere Commerce.
 This is invoked by triggering the following command from WC_HOME/bin directory: dataextract.cmd  <path to wc-dataload.xml>
   
-•	Extract the order details by triggering the following command from WC_HOME/bin directory:
+*	Extract the order details by triggering the following command from WC_HOME/bin directory:
 dataextract.cmd  <path to wc-dataload.xml> wc-dataload.xml uses the configuration files - wc-extract-order.xml and wc-extract-users.xml
 
 ## 2.	Import the files into PCI
 Select the starting node in PCI stream, and browse for the order and user files, exported from WCS.
 
 ## 3.	Churn out the user affinity-enriched files.
-•       The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
 
-•       The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
+*       The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
+
+*       The output files with the user-enriched data would be placed in the output path specified. The screenshot of the SPSS stream is below and the stream is available at the SPSS folder.
 
 ![](doc/source/images/spss_stream.PNG)
 
@@ -83,23 +84,23 @@ Screen 2:
 
 ## 5.	Ensure that the custom code is all placed properly and server is restarted.
 
-•	Changes done to the file wc-search.xml : searchProfile IBM_findProductsBySearchTerm changes to include a new provider, ExtSearchBoostExpressionProvider
+*	Changes done to the file wc-search.xml : searchProfile IBM_findProductsBySearchTerm changes to include a new provider, ExtSearchBoostExpressionProvider
 
-•	GetUserAffinityDataBean : This data bean fetches the user attribute affinity and attribute preference.
+*	GetUserAffinityDataBean : This data bean fetches the user attribute affinity and attribute preference.
 
-•	ExtSearchDisplayCmdImpl : This is a new command which extends OOTB SearchDisplayCmd and performs search
+*	ExtSearchDisplayCmdImpl : This is a new command which extends OOTB SearchDisplayCmd and performs search
 
-•	GetSynonymDictionaryBySearchTermDB : This data bean fetches the user synonym dictionary based on the supplied search term.
+*	GetSynonymDictionaryBySearchTermDB : This data bean fetches the user synonym dictionary based on the supplied search term.
 
-•	SearchResultsDisplay.jsp : The changes done in this file includes the customization to display a personalized message for custom search “ Your search result page has been personalized. Please click here for non personalized search”. Clicking on the hyperlink for non-personalized search invokes the nonPersonalizeSearch() javascript function from Search.js. 
+*	SearchResultsDisplay.jsp : The changes done in this file includes the customization to display a personalized message for custom search “ Your search result page has been personalized. Please click here for non personalized search”. Clicking on the hyperlink for non-personalized search invokes the nonPersonalizeSearch() javascript function from Search.js. 
 
 Also,a new dojo function is added to keep functionality working (fetching personalized and non-personalized results) even on page refresh. 
 
-•	Search_UI.jspf : The form searchBox  in the jspf is changed and new param userPrefSearch is passed to ExtSearchDisplayCmd. This change is required to add in the two new checkboxes for Self and Gift,within the Search box.
+*	Search_UI.jspf : The form searchBox  in the jspf is changed and new param userPrefSearch is passed to ExtSearchDisplayCmd. This change is required to add in the two new checkboxes for Self and Gift,within the Search box.
 
-•	Search.js : Two new javascript methods nonPersonalizeSearch() and userPreferredSearch() are added for out-of-box search and customized search. The latter is invoked on selecting the checkboxes introduced for Self and Gift search. 
+*	Search.js : Two new javascript methods nonPersonalizeSearch() and userPreferredSearch() are added for out-of-box search and customized search. The latter is invoked on selecting the checkboxes introduced for Self and Gift search. 
 
-•	SearchSetup.jspf : This file is modified to invoke GetUserAffinityDataBean and preferred attributes are passed to the search cluster.
+*	SearchSetup.jspf : This file is modified to invoke GetUserAffinityDataBean and preferred attributes are passed to the search cluster.
 
 ## 6.	Database changes in WCS
 
