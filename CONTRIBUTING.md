@@ -41,8 +41,7 @@ For more details, see the [MAINTAINERS](MAINTAINERS.md) page.
 
 ## Communication
 
-Please feel free to connect with us on our [here]
-(https://github.com/IBM/context-driven-personalization-websphere/issues).
+Please feel free to connect with us on our [here](https://github.com/IBM/context-driven-personalization-websphere/issues).
 
 ## Setup
 
