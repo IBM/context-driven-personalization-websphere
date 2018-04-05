@@ -32,7 +32,7 @@ The intended audience for this journey are architects and senior developers who 
 
 # Watch The Video
 
-To be updated
+[![](http://img.youtube.com/vi/Hfrcdr5wU-Q/0.jpg)](https://youtu.be/Hfrcdr5wU-Q)
 
 # Steps
 
