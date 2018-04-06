@@ -28,7 +28,7 @@ The intended audience for this pattern are practitioners or business users who w
 ## Features Technologies
 
 1.	[Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-2.	[Java](https://developer.ibm.com/code/technologies/java/): A secure Object-oriented programming language, used to build applications. IBM Websphere Commerce is built using Java script, Java Server Pages and Java programming language.
+2.	[Java](https://developer.ibm.com/code/technologies/java/): A secure Object-oriented programming language, used to build applications. IBM WebSphere Commerce platform is built on J2EE framework which includes (JSP, Java, Java Script, Struts, REST & Webservices, EJBs)
 
 # Watch The Video
 
