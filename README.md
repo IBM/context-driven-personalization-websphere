@@ -1,12 +1,12 @@
 # Intent and Context driven personalization
 
-Search is an integral component of most websites, whether it be a content site or a commerce site. The search personalization capabilities available in COTS (Commercial Off The Shelf) and generally implemented are still rudimentary rule based behavior and cater to a large set of users and therefore lacks hyper personalization. Through our pattern you will be able to gauge the user’s context & intent and delivery an optimized, personalized search result and reduce the number of clicks for a user to get to the content or product.
+Search is an integral component of most websites, whether it be a content site or a commerce site. The search personalization capabilities available in COTS (Commercial Off The Shelf) and generally implemented are still rudimentary rule based behavior and cater to a large set of users and therefore lacks hyper personalization. From this pattern you will be able to gauge the user’s context & intent and deliver an optimized, personalized search result and reduce the number of clicks for a user to get to the content or product.
 
 This pattern demonstrates a methodology to personalize search results, by identifying clear-cut affinities/preferences across various categories that the customer has ordered for in the past.
 
 When the reader has completed this pattern, they will understand how to develop search personalization and boost search results, in accordance with each customer’s preferences, using the IBM WebSphere Commerce and IBM PCI (Predictive Customer Intelligence).
 
-The intended audience for this pattern are architects and senior developers who want to deliver personalization to their product / content search functionality.
+The intended audience for this pattern are practitioners or business users who want to demonstrate intent and context driven personalization to their end customers, architects and senior developers who want to understand and learn technologies on how to develop and built personalization scenarios, such as in this case- context driven search.
 
 ![](doc/source/images/journey1_architecture.PNG)
 
