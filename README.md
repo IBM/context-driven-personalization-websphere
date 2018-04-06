@@ -32,7 +32,7 @@ The intended audience for this pattern are architects and senior developers who 
 
 # Watch The Video
 
-[![](http://img.youtube.com/vi/Hfrcdr5wU-Q/0.jpg)](https://youtu.be/Hfrcdr5wU-Q)
+[![](http://img.youtube.com/vi/RU76VZ2BZgQ/0.jpg)](https://youtu.be/RU76VZ2BZgQ)
 
 # Steps
 
