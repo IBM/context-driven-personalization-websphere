@@ -28,13 +28,19 @@ The intended audience for this pattern are practitioners or business users who w
 ## Features Technologies
 
 1.	[Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-2.	[Java](https://developer.ibm.com/code/technologies/java/): A secure Object-oriented programming language, used to build applications. IBM WebSphere Commerce platform is built on J2EE framework which includes (JSP, Java, Java Script, Struts, REST & Webservices, EJBs)
+2.	[J2EE](http://www.oracle.com/technetwork/java/javaee/overview/index.html): A secure Object-oriented programming language, used to build applications. IBM WebSphere Commerce platform is built on J2EE framework which includes (JSP, Java, Java Script, Struts, REST & Webservices, EJBs)
 
 # Watch The Video
 
 [![](http://img.youtube.com/vi/RU76VZ2BZgQ/0.jpg)](https://youtu.be/RU76VZ2BZgQ)
 
 # Steps
+
+## Pre-requisites
+* Install WebSphere Commerce Version 8 
+(https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.install.doc/concepts/ccminstalling.htm)
+* Publish ExtendedSites.sar by logging to WebSphere Commerce Admin Console. This publishes the Aurora B2C storefront. 
+* Set up PCI (https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html ) 
 
 Follow these steps to setup and run this developer pattern. The steps are described in detail below.
 
@@ -144,6 +150,8 @@ Execute below SQL statement by updating CMDREG
 ```
 INSERT INTO CMDREG (STOREENT_ID, INTERFACENAME, CLASSNAME, TARGET) VALUES (0, 'com.ibm.commerce.catalog.commands.SearchDisplayCmd', 'com.ext.commerce.catalog.commands.ExtSearchDisplayCmdImpl', 'Local');
 ```
+Once the code and Database changes are effected, ensure that the Websphere Server is restarted.
+
 ## 7.	Login to WCS
 
 Login into `WCS` as one of the existing users, who had placed prior orders across multiple categories. This data would have been analyzed by PCI and the user would have a strong affinity established.
