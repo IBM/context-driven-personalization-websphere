@@ -77,9 +77,12 @@ Select the starting node in PCI stream, and browse for the order and user files,
 * Navigate to [spss_stream](https://github.com/IBM/context-driven-personalization-websphere/tree/master/spss_stream)
 
 * Open the SPSS stream with SPSS modeler, double click on `Orders.csv` node browse and select the input file, click `ok` & do a right click and hit `run`. The output file for user affinity will be saved at the specified location.
-![](doc/source/images/ss1)
-![](doc/source/images/ss2)
-![](doc/source/images/ss3)
+
+![](doc/source/images/ss1.PNG)
+
+![](doc/source/images/ss2.PNG)
+
+![](doc/source/images/ss3.PNG)
 
 * Open the SPSS stream with SPSS modeler, double click on `Pageview_new.csv` node browse and select the input file, click `ok` & do a right click and hit `run`. The output file for user synonyms will be saved at the specified location.
 
