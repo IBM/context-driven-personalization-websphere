@@ -32,12 +32,12 @@ The intended audience for this pattern are practitioners or business users who w
 
 # Watch The Video
 
-[![](http://img.youtube.com/vi/RU76VZ2BZgQ/0.jpg)](https://youtu.be/RU76VZ2BZgQ)
+[![](http://img.youtube.com/vi/2prJoQkySUg/0.jpg)](https://youtu.be/2prJoQkySUg)
 
 # Steps
 
 ## Pre-requisites
-* Install WebSphere Commerce Version 8 
+* Install WebSphere Commerce Developer Version 8 
 (https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.install.doc/concepts/ccminstalling.htm)
 * Publish ExtendedSites.sar by logging to WebSphere Commerce Admin Console. This publishes the Aurora B2C storefront. 
 * Set up PCI (https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html ) 
@@ -157,7 +157,7 @@ Execute below SQL statement by updating CMDREG
 ```
 INSERT INTO CMDREG (STOREENT_ID, INTERFACENAME, CLASSNAME, TARGET) VALUES (0, 'com.ibm.commerce.catalog.commands.SearchDisplayCmd', 'com.ext.commerce.catalog.commands.ExtSearchDisplayCmdImpl', 'Local');
 ```
-Once the code and Database changes are effected, ensure that the Websphere Server is restarted.
+Once the code and Database changes are effected, ensure that the  WebSphere Commerce Server is restarted.
 
 ## 7.	Login to WCS
 
