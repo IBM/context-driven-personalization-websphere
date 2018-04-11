@@ -37,10 +37,9 @@ The intended audience for this pattern are practitioners or business users who w
 # Steps
 
 ## Pre-requisites
-* Install WebSphere Commerce Developer Version 8 
-(https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.install.doc/concepts/ccminstalling.htm)
+* Install [WebSphere Commerce Developer Version 8](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.install.doc/concepts/ccminstalling.htm)
 * Publish ExtendedSites.sar by logging to WebSphere Commerce Admin Console. This publishes the Aurora B2C storefront. 
-* Set up PCI (https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html ) 
+* Set up [PCI](https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html ) 
 
 Follow these steps to setup and run this developer pattern. The steps are described in detail below.
 
