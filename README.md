@@ -21,25 +21,25 @@ The intended audience for this pattern are practitioners or business users who w
 
 ## Included components
 
-[WebSphere Commerce](http://www-03.ibm.com/software/products/en/websphere-commerce): IBM WebSphere Commerce is an omni-channel commerce platform that gives you the customer and business insight needed to engage shoppers as individuals with personalized content and offers, deliver mobile optimized experiences and more quickly respond to market opportunities to grow your business.
+[WebSphere Commerce](https://www-03.ibm.com/software/products/en/websphere-commerce): IBM WebSphere Commerce is an omni-channel commerce platform that gives you the customer and business insight needed to engage shoppers as individuals with personalized content and offers, deliver mobile optimized experiences and more quickly respond to market opportunities to grow your business.
 
-[Predictive Customer Intelligence](https://www.ibm.com/us-en/marketplace/predictive-customer-analytics): PCI is an analytical tool that helps with reaching customer objectives and improving customer experience by analyzing the available data and predicting next best actions. The analytics in PCI is driven by IBM SPSS Modeler.
+[Predictive Customer Intelligence](https://www.ibm.com/us-en/marketplace/predictive-customer-analytics-on-cloud): PCI is an analytical tool that helps with reaching customer objectives and improving customer experience by analyzing the available data and predicting next best actions. The analytics in PCI is driven by IBM SPSS Modeler.
 
 ## Features Technologies
 
-1.	[Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-2.	[J2EE](http://www.oracle.com/technetwork/java/javaee/overview/index.html): A secure Object-oriented programming language, used to build applications. IBM WebSphere Commerce platform is built on J2EE framework which includes (JSP, Java, Java Script, Struts, REST & Webservices, EJBs)
+1.	[Data Science](https://developer.ibm.com/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
+2.	[J2EE](https://www.oracle.com/technetwork/java/javaee/overview/index.html): A secure Object-oriented programming language, used to build applications. IBM WebSphere Commerce platform is built on J2EE framework which includes (JSP, Java, Java Script, Struts, REST & Webservices, EJBs)
 
 # Watch The Video
 
-[![](http://img.youtube.com/vi/2prJoQkySUg/0.jpg)](https://youtu.be/2prJoQkySUg)
+[![](https://img.youtube.com/vi/2prJoQkySUg/0.jpg)](https://youtu.be/2prJoQkySUg)
 
 # Steps
 
 ## Pre-requisites
 * Install [WebSphere Commerce Developer Version 8](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.install.doc/concepts/ccminstalling.htm)
-* Publish ExtendedSites.sar by logging to WebSphere Commerce Admin Console. This publishes the Aurora B2C storefront. 
-* Set up [PCI](https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html ) 
+* Publish ExtendedSites.sar by logging to WebSphere Commerce Admin Console. This publishes the Aurora B2C storefront.
+* Set up [PCI](https://www.ibm.com/support/knowledgecenter/SSCJHT_1.1.1/pci/install_container.html)
 
 Follow these steps to setup and run this developer pattern. The steps are described in detail below.
 
@@ -57,7 +57,7 @@ UPDATE ATTR SET FIELD1=0 WHERE ATTR_ID IN (SELECT ATTR_ID FROM ATTRDESC WHERE LA
 
 *	Extract the user profile details by using the data extract utility in WebSphere Commerce.
 This is invoked by triggering the following command from `WC_HOME/bin` directory: dataextract.cmd  <path to wc-dataload.xml>
-  
+
 *	Extract the order details by triggering the following command from `WC_HOME/bin` directory:
 dataextract.cmd  <path to wc-dataload.xml> wc-dataload.xml uses the configuration files - wc-extract-order.xml and wc-extract-users.xml
 
@@ -69,7 +69,7 @@ Select the starting node in PCI stream, and browse for the order and user files,
 
 * The files are processed by the SPSS Modeler to associate with user affinity/preference data. The input files would be order & user files in csv format extracted from WCS.
 
-*  The output files with the user-enriched data would be placed in the output path specified. 
+*  The output files with the user-enriched data would be placed in the output path specified.
 
 * [Clone This Repo](https://github.com/IBM/context-driven-personalization-websphere)
 
@@ -114,36 +114,36 @@ Screen 2:
 
 *	`GetSynonymDictionaryBySearchTermDB`: This data bean fetches the user synonym dictionary based on the supplied search term.
 
-*	`SearchResultsDisplay.jsp`: The changes done in this file includes the customization to display a personalized message for custom search `“Your search result page has been personalized. Please click here for non personalized search”`. Clicking on the hyperlink for non-personalized search invokes the nonPersonalizeSearch() javascript function from Search.js. 
+*	`SearchResultsDisplay.jsp`: The changes done in this file includes the customization to display a personalized message for custom search `“Your search result page has been personalized. Please click here for non personalized search”`. Clicking on the hyperlink for non-personalized search invokes the nonPersonalizeSearch() javascript function from Search.js.
 
-Also, a new dojo function is added to keep functionality working (fetching personalized and non-personalized results) even on page refresh. 
+Also, a new dojo function is added to keep functionality working (fetching personalized and non-personalized results) even on page refresh.
 
 *	`Search_UI.jspf`: The form searchBox  in the jspf is changed and new param userPrefSearch is passed to ExtSearchDisplayCmd. This change is required to add in the two new checkboxes for Self and Gift, within the Search box.
 
-*	`Search.js`: Two new javascript methods nonPersonalizeSearch() and userPreferredSearch() are added for out-of-box search and customized search. The latter is invoked on selecting the checkboxes introduced for Self and Gift search. 
+*	`Search.js`: Two new javascript methods nonPersonalizeSearch() and userPreferredSearch() are added for out-of-box search and customized search. The latter is invoked on selecting the checkboxes introduced for Self and Gift search.
 
 *	`SearchSetup.jspf`: This file is modified to invoke GetUserAffinityDataBean and preferred attributes are passed to the search cluster.
 
 ## 6.	Database changes in WCS
 ```
-CREATE TABLE USER_CAT_AFFINITY ( 
-	USERS_ID BIGINT NOT NULL,    
+CREATE TABLE USER_CAT_AFFINITY (
+	USERS_ID BIGINT NOT NULL,
     CATID BIGINT NOT NULL,
 	BRAND VARCHAR (254),
-	LASTUPDATE TIMESTAMP,	
-	CONSTRAINT USER_CAT_PRICE_AFFINITY_PK PRIMARY KEY (USERS_ID, CATID), 
-	CONSTRAINT USER_CAT_PRICE_AFFINITY_FK FOREIGN KEY (USERS_ID) REFERENCES USERS (USERS_ID) ON DELETE CASCADE	
+	LASTUPDATE TIMESTAMP,
+	CONSTRAINT USER_CAT_PRICE_AFFINITY_PK PRIMARY KEY (USERS_ID, CATID),
+	CONSTRAINT USER_CAT_PRICE_AFFINITY_FK FOREIGN KEY (USERS_ID) REFERENCES USERS (USERS_ID) ON DELETE CASCADE
 );
-CREATE TABLE USER_ATTR_AFFINITY ( 
+CREATE TABLE USER_ATTR_AFFINITY (
 	UATTR_ID BIGINT NOT NULL,
-	USERS_ID BIGINT NOT NULL, 
+	USERS_ID BIGINT NOT NULL,
 	CATID BIGINT NOT NULL,
-	ATTRFACETNAME VARCHAR (254),    
+	ATTRFACETNAME VARCHAR (254),
     ATTRFACETVALUE VARCHAR (254),
 	ISATTRPREF INTEGER NOT NULL,
 	LASTUPDATE TIMESTAMP,
 	CONSTRAINT USER_ATTR_AFFINITY_PK PRIMARY KEY (UATTR_ID),
-	CONSTRAINT USER_ATTR_AFFINITY_UK UNIQUE (USERS_ID, CATID, ATTRFACETNAME, ATTRFACETVALUE, ISATTRPREF), 
+	CONSTRAINT USER_ATTR_AFFINITY_UK UNIQUE (USERS_ID, CATID, ATTRFACETNAME, ATTRFACETVALUE, ISATTRPREF),
 	CONSTRAINT USER_ATTR_AFFINITY_FK FOREIGN KEY (USERS_ID) REFERENCES USERS (USERS_ID) ON DELETE CASCADE,
 	CONSTRAINT USER_ATTR_AFFINITY_UCAT_FK FOREIGN KEY (USERS_ID, CATID) REFERENCES USER_CAT_AFFINITY (USERS_ID, CATID) ON DELETE CASCADE
 );
@@ -152,7 +152,7 @@ Make entry in KEYS/SUBKEYS tables
 ```
 INSERT INTO KEYS VALUES((select  min(KEYS_ID)-1  from keys),'user_attr_affinity','UATTR_ID',10000,500,0,9223372036849999872,3,'0',1048576);
 ```
-Execute below SQL statement by updating CMDREG 
+Execute below SQL statement by updating CMDREG
 ```
 INSERT INTO CMDREG (STOREENT_ID, INTERFACENAME, CLASSNAME, TARGET) VALUES (0, 'com.ibm.commerce.catalog.commands.SearchDisplayCmd', 'com.ext.commerce.catalog.commands.ExtSearchDisplayCmdImpl', 'Local');
 ```
@@ -172,6 +172,6 @@ Search for a category and notice that the search results are tuned in accordance
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the Developer [Certificate of Origin, Version 1.1 (DCO)] (https://developercertificate.org/) and the [Apache Software License, Version 2] (http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the Developer [Certificate of Origin, Version 1.1 (DCO)] (https://developercertificate.org/) and the [Apache Software License, Version 2] (https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-ASL FAQ link: http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN
+ASL FAQ link: https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN
